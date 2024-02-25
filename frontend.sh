@@ -5,6 +5,10 @@ dnf install nginx -y
 systemctl enable nginx
 systemctl start nginx
 
+#Create Nginx Reverse Proxy Configuration.
+#cp roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp roboshop.conf  /etc/nginx/default.d/roboshop.conf
+
 #Remove the default content that web server is serving.
 rm -rf /usr/share/nginx/html/*
 
@@ -15,8 +19,8 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
-#Create Nginx Reverse Proxy Configuration.
-#cp roboshop.conf /etc/nginx/default.d/roboshop.conf
+
+
 
 #Restart Nginx Service to load the changes of the configuration.
 systemctl restart nginx
