@@ -16,7 +16,7 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
 #Create Nginx Reverse Proxy Configuration.
-cp roboshop.conf /etc/nginx/default.d/roboshop.conf
+#cp roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 #Restart Nginx Service to load the changes of the configuration.
 systemctl restart nginx
