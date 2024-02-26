@@ -21,7 +21,6 @@ unzip /tmp/frontend.zip
 
 
 
-
 #Restart Nginx Service to load the changes of the configuration.
 systemctl restart nginx
 
