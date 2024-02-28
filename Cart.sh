@@ -6,6 +6,9 @@ echo -e "\e[37m»>>>>>>>> enable nodejs:18 <<<<<<<<\e[0m"
 dnf module enable nodejs:18 -y
 echo -e "\e[37m»>>>>>>>>install nodejs <<<<<<<<\e[0m"
 
+cp cart.service /etc/systemd/system/
+echo -e "\e[37m»>>>>>>>>npm install <<<<<<<<\e[0m"
+
 dnf install nodejs -y
 echo -e "\e[37m»>>>>>>>> useradd roboshop <<<<<<<<\e[0m"
 
@@ -21,9 +24,6 @@ echo -e "\e[37m»>>>>>>>> unzip /tmp/cart.zip<<<<<<<<\e[0m"
 
 unzip /tmp/cart.zip
 echo -e "\e[37m»>>>>>>>>copy cart.service to /etc/systemd/system/ <<<<<<<<\e[0m"
-
-cp cart.service /etc/systemd/system/
-echo -e "\e[37m»>>>>>>>>npm install <<<<<<<<\e[0m"
 
 npm install
 echo -e "\e[37m»>>>>>>>>systemctl daemon-reload <<<<<<<<\e[0m"
