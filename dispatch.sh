@@ -3,7 +3,7 @@ dnf install golang -y
 echo -e "\e[37m»>>>>>>>>   useradd roboshop      <<<<<<<<\e[0m"
 
 echo -e "\e[37m»>>>>>>>>  cp dispatch.service       <<<<<<<<\e[0m"
-cp dispatch.service /etc/systemd/system/
+cp dispatch.service /etc/systemd/system/dispatch.service
 useradd roboshop
 
 echo -e "\e[37m»>>>>>>>> mkdir /app        <<<<<<<<\e[0m"
@@ -25,6 +25,8 @@ systemctl daemon-reload
 echo -e "\e[37m»>>>>>>>>  start dispatch       <<<<<<<<\e[0m"
 systemctl enable dispatch
 systemctl start dispatch
+
+echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"
 #...
 #     Devops-practice
 #...
