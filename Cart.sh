@@ -33,3 +33,5 @@ echo -e "\e[37m»>>>>>>>> systemctl enable cart and start<<<<<<<<\e[0m"
 
 systemctl enable cart
 systemctl start cart
+
+echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"
