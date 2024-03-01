@@ -1,1 +1,2 @@
-$0
+hello=$0
+echo$hello
