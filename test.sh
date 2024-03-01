@@ -2,6 +2,6 @@ name=sunil
 
 echo ${name}
 
-list=$((sudo ls))
+list=$( ls)
 
 echo $list
