@@ -4,4 +4,4 @@ echo ${name}
 
 list=$((ls))
 
-echo$list
+echo $list
