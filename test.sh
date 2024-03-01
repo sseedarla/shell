@@ -2,6 +2,6 @@ name=sunil
 
 echo ${name}
 
-list=$( ls)
+list=$(ls -l)
 
 echo $list
