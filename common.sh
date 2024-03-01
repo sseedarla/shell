@@ -2,11 +2,13 @@
 hello=$0
 echo $hello
 
+
 miccheck=$1
 echo ${miccheck}
 
-hellobro=$*
-echo $hellobro
 
-avuna=$#
-echo ${avuna}
+#hellobro=$*
+#echo $hellobro
+
+#avuna=$#
+#echo ${avuna}
