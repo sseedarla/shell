@@ -1,2 +1,2 @@
 hello=$0
-echo$hello
+echo $hello
