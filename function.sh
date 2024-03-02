@@ -2,7 +2,7 @@
 
 # Declare a function
 
-function_name() {
+ippudu_name() {
   echo Hello World
 }
 
