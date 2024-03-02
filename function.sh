@@ -5,3 +5,6 @@
 function_name() {
   echo Hello World
 }
+
+# Call function
+function_name
