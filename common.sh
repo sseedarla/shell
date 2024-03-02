@@ -1,6 +1,6 @@
 
 name=roboshop
-appuser echo ${name}
+echo ${name}
 
 
 Function1(){
