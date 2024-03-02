@@ -1,11 +1,10 @@
 
-name=roboshop
-echo ${name}
+appuser=roboshop
+echo ${appuser}
 
 
 Function1(){
 
-echo test
 
 }
 
