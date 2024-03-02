@@ -6,7 +6,7 @@ if [ -z "$fruit_name" ]; then
   exit
 fi
 
-if [ "$fruit_name" == "mango" ]
+if [ "$fruit_name" == "mango" ];
 then
   echo Mango Quantity - $quantity
 else
