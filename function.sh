@@ -7,4 +7,4 @@ ippudu_name() {
 }
 
 # Call function
-function_name
+ippudu_name
