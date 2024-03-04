@@ -1,3 +1,4 @@
-dirname
-$0
-#source common.sh
+path=dirname
+what=$0
+source common.sh
+Function1
