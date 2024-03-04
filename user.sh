@@ -1,3 +1,3 @@
-source common.sh
-
-Function1
+dirname
+$0
+#source common.sh

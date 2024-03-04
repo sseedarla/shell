@@ -1,6 +1,6 @@
 
-appuser=roboshop
-echo ${appuser}
+app_user=roboshop
+echo ${app_user}
 
 
 Function1(){
@@ -18,7 +18,7 @@ echo -e "\e[37m»>>>>>>>> install nodejs <<<<<<<<\e[0m"
 dnf install nodejs -y
 echo -e "\e[37m»>>>>>>>> useradd roboshop <<<<<<<<\e[0m"
 
-useradd roboshop
+useradd ${app_user}
 
 mkdir /app
 echo -e "\e[37m»>>>>>>>> download dependencies <<<<<<<<\e[0m"

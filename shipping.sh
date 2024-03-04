@@ -5,8 +5,8 @@ echo -e "\e[37m»>>>>>>>> install maven    <<<<<<<<\e[0m"
 dnf install maven -y
 echo -e "\e[37m»>>>>>>>> useradd roboshop <<<<<<<<\e[0m"
 
-useradd appuser
-echo appuser
+useradd ${app_user}
+
 
 mkdir /app
 echo -e "\e[37m»>>>>>>>> download dependencies <<<<<<<<\e[0m"

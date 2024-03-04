@@ -1,4 +1,4 @@
-
+source common.sh
 echo -e "\e[37m»>>>>>>>>  download packages    <<<<<<<<\e[0m"
 
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
@@ -15,7 +15,7 @@ systemctl enable rabbitmq-server
 systemctl start rabbitmq-server
 echo -e "\e[37m»>>>>>>>> add user    <<<<<<<<\e[0m"
 
-rabbitmqctl add_user roboshop roboshop123
+rabbitmqctl add_user ${app_user} roboshop123
 echo -e "\e[37m»>>>>>>>> set permissions to the user   <<<<<<<<\e[0m"
 
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"

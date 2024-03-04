@@ -1,3 +1,5 @@
+source common.sh
+
 echo -e "\e[37m»>>>>>>>>  disable existing MySQL and update update new     <<<<<<<<\e[0m"
 
 dnf module disable mysql -y
