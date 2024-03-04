@@ -1,7 +1,3 @@
-path=$(dirname)
-what=$0
-
-echo $path
-echo $what
+dirname $0
 #source common.sh
 #Function1
