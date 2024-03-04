@@ -27,6 +27,3 @@ systemctl enable dispatch
 systemctl start dispatch
 
 echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"
-#...
-#     Devops-practice
-#...

@@ -1,3 +1,5 @@
+
+
 echo -e "\e[37m»>>>>>>>> module disable nodejs<<<<<<<<\e[0m"
 dnf module disable nodejs -y
 echo -e "\e[37m»>>>>>>>> module enable nodejs<<<<<<<<\e[0m"
