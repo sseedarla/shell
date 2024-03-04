@@ -1,4 +1,4 @@
-path=dirname
+path=$(dirname)
 what=$0
 
 echo $path
