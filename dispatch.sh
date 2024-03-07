@@ -1,11 +1,14 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 
 echo -e "\e[37m»>>>>>>>>    install golang     <<<<<<<<\e[0m"
 dnf install golang -y
 echo -e "\e[37m»>>>>>>>>   useradd roboshop      <<<<<<<<\e[0m"
 
 echo -e "\e[37m»>>>>>>>>  cp dispatch.service       <<<<<<<<\e[0m"
-cp dispatch.service /etc/systemd/system/dispatch.service
+cp ${script_path}/dispatch.service /etc/systemd/system/dispatch.service
 useradd ${app_user}
 
 echo -e "\e[37m»>>>>>>>> mkdir /app        <<<<<<<<\e[0m"

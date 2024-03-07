@@ -1,4 +1,7 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 
 echo -e "\e[37m»>>>>>>>> module disable nodejs <<<<<<<<\e[0m"
 
@@ -7,7 +10,7 @@ echo -e "\e[37m»>>>>>>>> enable nodejs:18 <<<<<<<<\e[0m"
 dnf module enable nodejs:18 -y
 echo -e "\e[37m»>>>>>>>>install nodejs <<<<<<<<\e[0m"
 
-cp cart.service /etc/systemd/system/
+cp ${script_path}/cart.service /etc/systemd/system/
 echo -e "\e[37m»>>>>>>>>npm install <<<<<<<<\e[0m"
 
 dnf install nodejs -y

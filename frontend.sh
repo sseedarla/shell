@@ -1,3 +1,7 @@
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 #Install Nginx
 echo -e "\e[37m»>>>>>>>>  install nginx     <<<<<<<<\e[0m"
 dnf install nginx -y
@@ -9,7 +13,7 @@ echo -e "\e[37m»>>>>>>>>   copy roboshop.conf  to into location /etc/nginx/defa
 #Create Nginx Reverse Proxy Configuration.
 
 #cp roboshop.conf /etc/nginx/default.d/roboshop.conf
-cp roboshop.conf  /etc/nginx/default.d/roboshop.conf
+cp ${script_path}/roboshop.conf  /etc/nginx/default.d/roboshop.conf
 echo -e "\e[37m»>>>>>>>> remove the existing file and data if already loaded   <<<<<<<<\e[0m"
 #Remove the default content that web server is serving.
 rm -rf /usr/share/nginx/html/*

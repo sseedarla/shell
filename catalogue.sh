@@ -1,4 +1,7 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 
 echo -e "\e[37m»>>>>>>>> module disable nodejs<<<<<<<<\e[0m"
 dnf module disable nodejs -y
@@ -7,7 +10,7 @@ echo -e "\e[37m»>>>>>>>> module enable nodejs<<<<<<<<\e[0m"
 dnf module enable nodejs:18 -y
 echo -e "\e[37m»>>>>>>>> copy catalogue.service to  /etc/systemd/system/<<<<<<<<\e[0m"
 
-cp catalogue.service /etc/systemd/system/
+cp ${script_path}/catalogue.service /etc/systemd/system/
 echo -e "\e[37m»>>>>>>>> mongo.repo to /etc/yum.repos.d/<<<<<<<<\e[0m"
 
 cp mongo.repo /etc/yum.repos.d/

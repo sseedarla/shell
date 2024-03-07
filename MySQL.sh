@@ -1,11 +1,14 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 
 echo -e "\e[37m»>>>>>>>>  disable existing MySQL and update update new     <<<<<<<<\e[0m"
 
 dnf module disable mysql -y
 echo -e "\e[37m»>>>>>>>>  copy repo file to into location      <<<<<<<<\e[0m"
 
-cp mysql.repo /etc/yum.repos.d/
+cp ${script_path}/mysql.repo /etc/yum.repos.d/
 echo -e "\e[37m»>>>>>>>>  install mysql-community-server      <<<<<<<<\e[0m"
 
 dnf install mysql-community-server -y

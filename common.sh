@@ -10,9 +10,7 @@ dnf module disable nodejs -y
 echo -e "\e[37m»>>>>>>>> module enable nodejs<<<<<<<<\e[0m"
 
 dnf module enable nodejs:18 -y
-echo -e "\e[37m»>>>>>>>> copy user.service to  /etc/systemd/system/<<<<<<<<\e[0m"
 
-cp user.service /etc/systemd/system/
 echo -e "\e[37m»>>>>>>>> install nodejs <<<<<<<<\e[0m"
 
 dnf install nodejs -y
@@ -46,4 +44,3 @@ echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this me
 
 }
 
-Function1

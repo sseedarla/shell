@@ -1,4 +1,7 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 
 echo -e "\e[37m»>>>>>>>> install python36   <<<<<<<<\e[0m"
 
@@ -15,7 +18,7 @@ cd /app
 unzip /tmp/payment.zip
 echo -e "\e[37m»>>>>>>>>  copy  payment.service to its location /etc/systemd/system/  <<<<<<<<\e[0m"
 
-cp payment.service /etc/systemd/system/
+cp ${script_path}/payment.service /etc/systemd/system/
 echo -e "\e[37m»>>>>>>>> install -r requirements.txt   <<<<<<<<\e[0m"
 
 cd /app

@@ -1,4 +1,7 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 echo -e "\e[37m»>>>>>>>>  download packages    <<<<<<<<\e[0m"
 
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash

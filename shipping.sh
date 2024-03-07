@@ -1,4 +1,7 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+echo ${app_user}
+
 
 echo -e "\e[37m»>>>>>>>> install maven    <<<<<<<<\e[0m"
 
@@ -16,7 +19,7 @@ cd /app
 unzip /tmp/shipping.zip
 echo -e "\e[37m»>>>>>>>> copy shipping.service to  /etc/systemd/system/<<<<<<<<\e[0m"
 
-cp shipping.service /etc/systemd/system/
+cp ${script_path}/shipping.service /etc/systemd/system/
 
 cd /app
 mvn clean package
