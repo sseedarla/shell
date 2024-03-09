@@ -1,10 +1,8 @@
 
 app_user=roboshop
-echo ${app_user}
 
-exit
+
 Function1(){
-exit
 echo -e "\e[37m»>>>>>>>> module disable nodejs<<<<<<<<\e[0m"
 dnf module disable nodejs -y
 echo -e "\e[37m»>>>>>>>> module enable nodejs<<<<<<<<\e[0m"
@@ -28,7 +26,6 @@ echo -e "\e[37m»>>>>>>>> npm install <<<<<<<<\e[0m"
 
 cd /app
 npm install
-
 
 echo -e "\e[37m»>>>>>>>> daemon-reload<<<<<<<<\e[0m"
 
