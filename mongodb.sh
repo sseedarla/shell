@@ -1,7 +1,6 @@
-script_path=$(dirname $0)
+script=$(realpath "$0")
+script_path=$(dirname "$script")
 source ${script_path}/common.sh
-echo ${app_user}
-
 
 echo -e "\e[37m»>>>>>>>>  copy  mongodb.repo to its location  /etc/yum.repos.d/     <<<<<<<<\e[0m"
 cp ${script_path}/mongodb.repo /etc/yum.repos.d/

@@ -1,4 +1,5 @@
-
+script=$(realpath "$0")
+script_path=$(dirname "$script")
 app_user=roboshop
 
 
@@ -37,7 +38,6 @@ echo -e "\e[37m»>>>>>>>> start user <<<<<<<<\e[0m"
 
 systemctl start user
 echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"
-
 
 }
 
