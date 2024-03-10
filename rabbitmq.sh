@@ -4,6 +4,9 @@ source ${script_path}/common.sh
 rabbit_appuser_password=$1
 # $1 means First argument on input
 #roboshop123
+
+
+
 echo -e "\e[37m»>>>>>>>>  download packages    <<<<<<<<\e[0m"
 
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
@@ -25,4 +28,3 @@ echo -e "\e[37m»>>>>>>>> set permissions to the user   <<<<<<<<\e[0m"
 
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"
 
-echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"

@@ -14,4 +14,3 @@ echo -e "\e[37m»>>>>>>>> import schema from mongo <<<<<<<<\e[0m"
 
 mongo --host mongodb-dev.sseedarla.tech </app/schema/catalogue.js
 
-echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"
