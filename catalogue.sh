@@ -5,11 +5,11 @@ source ${script_path}/common.sh
 component=catalogue
 
 func_nodejs
+echo -e "\e[37m»>>>>>>>> copy mongo repo <<<<<<<<\e[0m"
 
 cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
-echo -e "\e[37m»>>>>>>>> install nodejs <<<<<<<<\e[0m"
 
-dnf install mongodb-org-shell -y
+yum install mongodb-org-shell -y
 echo -e "\e[37m»>>>>>>>> import schema from mongo <<<<<<<<\e[0m"
 
 mongo --host mongodb-dev.sseedarla.tech </app/schema/catalogue.js
