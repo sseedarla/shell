@@ -1,8 +1,8 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
+component=user
 
-cp ${script_path}/user.service /etc/systemd/system/user.service
+func_nodejs
 
 
-Function1

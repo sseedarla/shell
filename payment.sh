@@ -2,6 +2,8 @@ script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
 rabbit_appuser_password=$1
+#roboshop123
+
 
 echo -e "\e[37m»>>>>>>>> install python36   <<<<<<<<\e[0m"
 
