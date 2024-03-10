@@ -6,6 +6,7 @@ mysql_root_password=$1
 #RoboShop@1
 component=shipping
 
+cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
 
 echo -e "\e[37m»>>>>>>>> install maven    <<<<<<<<\e[0m"
 
@@ -13,6 +14,7 @@ dnf install maven -y
 echo -e "\e[37m»>>>>>>>> useradd roboshop <<<<<<<<\e[0m"
 
 useradd ${app_user}
+
 
 mkdir /app
 echo -e "\e[37m»>>>>>>>> download dependencies <<<<<<<<\e[0m"
@@ -40,7 +42,7 @@ echo -e "\e[37m»>>>>>>>> import schema  <<<<<<<<\e[0m"
 mysql -h <mysql-dev.sseedarla.tech> -uroot -p${mysql_root_password} < /app/schema/shipping.sql
 #mysql -h <mysql-dev.sseedarla.tech> -uroot -p${mysql_root_password} < /app/schema/${component}.sql
 
-cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
+
 
 systemctl daemon-reload
 
