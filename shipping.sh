@@ -14,7 +14,6 @@ echo -e "\e[37m»>>>>>>>> useradd roboshop <<<<<<<<\e[0m"
 
 useradd ${app_user}
 
-
 mkdir /app
 echo -e "\e[37m»>>>>>>>> download dependencies <<<<<<<<\e[0m"
 
@@ -23,27 +22,22 @@ cd /app
 unzip /tmp/${component}.zip
 echo -e "\e[37m»>>>>>>>> copy shipping.service to  /etc/systemd/system/<<<<<<<<\e[0m"
 
-cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
-
 cd /app
 mvn clean package
 echo -e "\e[37m»>>>>>>>> rename shipping - 1.0 to just jar<<<<<<<<\e[0m"
 
 mv target/shipping-1.0.jar ${component}.jar
-echo -e "\e[37m»>>>>>>>> daemon-reload<<<<<<<<\e[0m"
+echo -e "\e[37m»>>>>>>>> isntall mysql <<<<<<<<\e[0m"
+
+yum install mysql -y
+echo -e "\e[37m»>>>>>>>> import schema  <<<<<<<<\e[0m"
+
+mysql -h <mysql-dev.sseedarla.tech> -uroot -p${mysql_root_password} < /app/schema/${component}.sql
+
+cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
 
 systemctl daemon-reload
 echo -e "\e[37m»>>>>>>>> enable and start shipping  <<<<<<<<\e[0m"
 
 systemctl enable ${component}
 systemctl start ${component}
-echo -e "\e[37m»>>>>>>>> intall mysql server <<<<<<<<\e[0m"
-
-dnf install mysql -y
-echo -e "\e[37m»>>>>>>>> import schema  <<<<<<<<\e[0m"
-
-mysql -h <mysql-dev.sseedarla.tech> -uroot -p${mysql_root_password} < /app/schema/${component}.sql
-
-echo -e "\e[37m»>>>>>>>> restart shipping  <<<<<<<<\e[0m"
-
-systemctl restart ${component}
