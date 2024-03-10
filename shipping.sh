@@ -1,6 +1,9 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
+mysql_root_password=$1
+# $1 means First argument on input
+#RoboShop@1
 
 
 echo -e "\e[37m»>>>>>>>> install maven    <<<<<<<<\e[0m"
@@ -38,7 +41,7 @@ echo -e "\e[37m»>>>>>>>> intall mysql server <<<<<<<<\e[0m"
 dnf install mysql -y
 echo -e "\e[37m»>>>>>>>> import schema  <<<<<<<<\e[0m"
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/shipping.sql
+mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -p${mysql_root_password} < /app/schema/shipping.sql
 
 echo -e "\e[37m»>>>>>>>> restart shipping  <<<<<<<<\e[0m"
 
