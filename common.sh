@@ -2,47 +2,50 @@ script=$(realpath "$0")
 script_path=$(dirname "$script")
 app_user=roboshop
 
+print_head(){
+  echo -e "\e[36m»>>>>>>>> $1 <<<<<<<<\e[0m"
+}
 
 func_nodejs(){
-echo -e "\e[37m»>>>>>>>> module disable nodejs<<<<<<<<\e[0m"
+print_head "module disable nodejs"
 dnf module disable nodejs -y
-echo -e "\e[37m»>>>>>>>> module enable nodejs<<<<<<<<\e[0m"
+  print_head "module enable nodejs:18"
 
 dnf module enable nodejs:18 -y
 
-echo -e "\e[37m»>>>>>>>> install nodejs <<<<<<<<\e[0m"
+ print_head "install nodejs"
 
 dnf install nodejs -y
-echo -e "\e[37m»>>>>>>>> useradd roboshop <<<<<<<<\e[0m"
+print_head  "useradd roboshop"
 
 useradd ${app_user}
 
 mkdir /app
-echo -e "\e[37m»>>>>>>>> download dependencies <<<<<<<<\e[0m"
+ print_head "download dependencies"
 
 curl -L -o /tmp/${component}.zip https://roboshop-artifacts.s3.amazonaws.com/${component}.zip
 cd /app
 unzip /tmp/${component}.zip
-echo -e "\e[37m»>>>>>>>> npm install <<<<<<<<\e[0m"
+ print_head "npm install"
 
 cd /app
 npm install
 
-echo -e "\e[37m»>>>>>>>> copy file to path location <<<<<<<<\e[0m"
+ print_head "copy file to path location"
 
 cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
 
 
-echo -e "\e[37m»>>>>>>>> daemon-reload<<<<<<<<\e[0m"
+ print_head "daemon-reload"
 
 systemctl daemon-reload
-echo -e "\e[37m»>>>>>>>> enable user <<<<<<<<\e[0m"
+ print_head "enable user"
 
 systemctl enable ${component}
-echo -e "\e[37m»>>>>>>>> start user <<<<<<<<\e[0m"
+print_head  "start user"
 
 systemctl start ${component}
-echo -e "\e[37m»>>>>>>>>  Huarry its done without any issues if you see this message !!<<<<<<<<\e[0m"
+ print_head  "Huarry its done without any issues if you see this message !!"
 
 }
 
