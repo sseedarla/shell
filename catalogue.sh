@@ -12,5 +12,5 @@ cp ${script_path}/mongodb.repo /etc/yum.repos.d/mongodb.repo
 yum install mongodb-org-shell -y
 echo -e "\e[37m»>>>>>>>> import schema from mongo <<<<<<<<\e[0m"
 
-mongo --host mongodb-dev.sseedarla.tech </app/schema/catalogue.js
+mongo --host mongodb-dev.sseedarla.tech </app/schema/${component}.js
 
