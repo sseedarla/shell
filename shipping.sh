@@ -40,7 +40,6 @@ yum install mysql -y
 echo -e "\e[37m»>>>>>>>> import schema  <<<<<<<<\e[0m"
 
 mysql -h <mysql-dev.sseedarla.tech> -uroot -p${mysql_root_password} < /app/schema/shipping.sql
-#mysql -h <mysql-dev.sseedarla.tech> -uroot -p${mysql_root_password} < /app/schema/${component}.sql
 
 
 

@@ -6,6 +6,18 @@ print_head(){
   echo -e "\e[36m»>>>>>>>> $1 <<<<<<<<\e[0m"
 }
 
+schema_setup(){
+  echo -e "\e[37m»>>>>>>>> copy mongo repo <<<<<<<<\e[0m"
+
+  cp ${script_path}/mongodb.repo /etc/yum.repos.d/mongodb.repo
+
+  yum install mongodb-org-shell -y
+  echo -e "\e[37m»>>>>>>>> import schema from mongo <<<<<<<<\e[0m"
+
+  mongo --host mongodb-dev.sseedarla.tech </app/schema/${component}.js
+
+}
+
 func_nodejs(){
 print_head "module disable nodejs"
 dnf module disable nodejs -y
@@ -47,5 +59,6 @@ print_head  "start user"
 systemctl start ${component}
  print_head  "Huarry its done without any issues if you see this message !!"
 
+schema_setup
 }
 
