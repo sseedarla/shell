@@ -5,6 +5,12 @@ rabbit_appuser_password=$1
 #roboshop123
 component=payment
 
+if[ -z "$rabbitmq_appuser_password" ]; then
+  echo Please enter rabbitmq_appuser_password and try again ..
+  exit
+  fi
+
+
 echo -e "\e[37m»>>>>>>>> install python36   <<<<<<<<\e[0m"
 
 dnf install python36 gcc python3-devel -y
@@ -20,7 +26,7 @@ cd /app
 unzip /tmp/${component}.zip
 echo -e "\e[37m»>>>>>>>>  copy  payment.service to its location /etc/systemd/system/  <<<<<<<<\e[0m"
 
-sed -i -e "s|rabbit_appuser_password|${rabbit_appuser_password}|" ${script_path}/payment.service
+sed -i -e "s|rabbit_appuser_password|${rabbitmq_appuser_password}|" ${script_path}/payment.service
 cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
 echo -e "\e[37m»>>>>>>>> install -r requirements.txt   <<<<<<<<\e[0m"
 

@@ -1,10 +1,13 @@
 script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
-rabbit_appuser_password=$1
+rabbitmq_appuser_password=$1
 # $1 means First argument on input
 #roboshop123
-
+if[ -z "$rabbitmq_appuser_password" ]; then
+  echo Please enter  rabbitmq_appuser_password and try again ..
+  exit
+  fi
 
 
 echo -e "\e[37m»>>>>>>>>  download packages    <<<<<<<<\e[0m"
@@ -23,7 +26,7 @@ systemctl enable rabbitmq-server
 systemctl start rabbitmq-server
 echo -e "\e[37m»>>>>>>>> add user    <<<<<<<<\e[0m"
 
-rabbitmqctl add_user ${app_user} ${rabbit_appuser_password}
+rabbitmqctl add_user ${app_user} ${rabbitmq_appuser_password}
 echo -e "\e[37m»>>>>>>>> set permissions to the user   <<<<<<<<\e[0m"
 
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"

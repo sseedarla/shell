@@ -6,6 +6,11 @@ mysql_root_password=$1
 #RoboShop@1
 component=shipping
 
+if [ -z "mysql_root_password" ]; then
+  echo Please enter mysql_root_password and try again
+  exit
+  fi
+
 cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
 
 echo -e "\e[37m»>>>>>>>> install maven    <<<<<<<<\e[0m"
