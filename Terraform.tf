@@ -23,7 +23,7 @@ resource "aws_instance" "mongodb" {
   instance_type           = "t3.micro"
   tags = { Name = "mongodb"}
 }
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "mongodb" {
   zone_id = "Z003289722MQNM42L3N3R"
   name    = "mongodb-dev.sseedarla.tech"
   type    = "A"
