@@ -4,7 +4,7 @@ source ${script_path}/common.sh
 rabbitmq_appuser_password=$1
 # $1 means First argument on input
 #roboshop123
-if[ -z "$rabbitmq_appuser_password" ]; then
+if [ -z "$rabbitmq_appuser_password" ]; then
   echo Please enter  rabbitmq_appuser_password and try again ..
   exit
   fi
