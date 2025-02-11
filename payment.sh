@@ -3,6 +3,8 @@ script_path=$(dirname "$script")
 source ${script_path}/common.sh
 rabbit_appuser_password=$1
 #roboshop123
+#while entering you have to enter " sudo bash payment.sh roboshop123 " in the command line while you run this payment.sh bash file
+
 component=payment
 
 if [ -z "$rabbitmq_appuser_password"]; then
