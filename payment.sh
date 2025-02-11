@@ -28,7 +28,7 @@ cd /app
 unzip /tmp/${component}.zip
 echo -e "\e[37m»>>>>>>>>  copy  payment.service to its location /etc/systemd/system/  <<<<<<<<\e[0m"
 
-sed -i -e "s|rabbit_appuser_password|${rabbitmq_appuser_password}|" ${script_path}/payment.service
+sed -i -e "s|rabbit_appuser_password|${rabbitmq_appuser_password}|" ${script_path}/${component}.service
 cp ${script_path}/${component}.service /etc/systemd/system/${component}.service
 echo -e "\e[37m»>>>>>>>> install -r requirements.txt   <<<<<<<<\e[0m"
 
