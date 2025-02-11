@@ -7,7 +7,7 @@ rabbitmq_appuser_password=$1
 
 component=payment
 
-if [ -z "$rabbitmq_appuser_password"]; then
+if [ -z "$rabbitmq_appuser_password" ]; then
   echo Please enter rabbitmq_appuser_password and try again ..
   exit
   fi
