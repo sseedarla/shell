@@ -4,6 +4,7 @@ source ${script_path}/common.sh
 rabbitmq_appuser_password=$1
 # $1 means First argument on input
 #roboshop123
+#while entering you have to enter " sudo bash rabbitmq.sh roboshop123 " in the command line while you run this rabbitmq bash file
 if [ -z "$rabbitmq_appuser_password" ]; then
   echo Please enter  rabbitmq_appuser_password and try again ..
   exit
