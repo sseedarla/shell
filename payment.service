@@ -4,11 +4,11 @@ Description=Payment Service
 [Service]
 User=root
 WorkingDirectory=/app
-Environment=CART_HOST=<CART-SERVER-IPADDRESS>
+Environment=CART_HOST=35.153.74.2
 Environment=CART_PORT=8080
-Environment=USER_HOST=<USER-SERVER-IPADDRESS>
+Environment=USER_HOST=35.153.74.2
 Environment=USER_PORT=8080
-Environment=AMQP_HOST=<RABBITMQ-SERVER-IPADDRESS>
+Environment=AMQP_HOST=35.153.74.2
 Environment=AMQP_USER=roboshop
 Environment=AMQP_PASS=rabbit_appuser_password
 
