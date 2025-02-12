@@ -13,19 +13,7 @@ mvn clean package
 mv target/shipping-1.0.jar shipping.jar
 
 
-# Hint! You can create file by using vim /etc/systemd/system/shipping.service
-[Unit]
-Description=Shipping Service
 
-[Service]
-User=roboshop
-Environment=CART_ENDPOINT=<CART-SERVER-IPADDRESS>:8080
-Environment=DB_HOST=<MYSQL-SERVER-IPADDRESS>
-ExecStart=/bin/java -jar /app/shipping.jar
-SyslogIdentifier=shipping
-
-[Install]
-WantedBy=multi-user.target
 
 
 systemctl daemon-reload

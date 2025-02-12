@@ -14,21 +14,9 @@ unzip /tmp/cart.zip
 cd /app
 npm install
 
-# You can create file by using vim /etc/systemd/system/cart.service
-# /etc/systemd/system/cart.service
 
-[Unit]
-Description = Cart Service
-[Service]
-User=roboshop
-Environment=REDIS_HOST=<REDIS-SERVER-IP>
-Environment=CATALOGUE_HOST=<CATALOGUE-SERVER-IP>
-Environment=CATALOGUE_PORT=8080
-ExecStart=/bin/node /app/server.js
-SyslogIdentifier=cart
 
-[Install]
-WantedBy=multi-user.target
+
 
 systemctl daemon-reload
 

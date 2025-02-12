@@ -14,21 +14,6 @@ go mod init dispatch
 go get
 go build
 
-# Hint! You can create file by using vim /etc/systemd/system/dispatch.service
-
-/etc/systemd/system/dispatch.service
-[Unit]
-Description = Dispatch Service
-[Service]
-User=roboshop
-Environment=AMQP_HOST=RABBITMQ-IP
-Environment=AMQP_USER=roboshop
-Environment=AMQP_PASS=roboshop123
-ExecStart=/app/dispatch
-SyslogIdentifier=dispatch
-
-[Install]
-WantedBy=multi-user.target
 
 
 systemctl daemon-reload
