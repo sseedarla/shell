@@ -1,6 +1,8 @@
 
 cd /etc/yum.repos.d/
 sudo rm -rf mongo.repo
+
+cd /home/centos/shell
 sudo mv mongo.repo /etc/yum.repos.d/
 sudo bash mongodb.sh
 
