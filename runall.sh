@@ -1,8 +1,10 @@
+
+
 sudo mv mongo.repo /etc/yum.repos.d/
 sudo bash MongoDB.sh
 
-sudo mv mysql.repo /etc/yum.repos.d/
-sudo bash MySQL.sh
+#sudo mv mysql.repo /etc/yum.repos.d/
+#sudo bash MySQL.sh
 
 
 #sudo bash Cart.sh
