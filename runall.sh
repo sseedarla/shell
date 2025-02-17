@@ -1,7 +1,7 @@
 
 
 sudo mv mongo.repo /etc/yum.repos.d/
-sudo bash MongoDB.sh
+sudo bash mongodb.sh
 
 #sudo mv mysql.repo /etc/yum.repos.d/
 #sudo bash MySQL.sh
