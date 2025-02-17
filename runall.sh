@@ -9,8 +9,12 @@ sudo bash mongodb.sh
 
 
 #sudo bash Cart.sh
+
+#sudo mv catalogue.service /etc/systemd/system/
 #sudo bash Catalogue.sh
 #sudo bash Dispatch.sh
+
+#sudo mv roboshop.conf /etc/nginx/default.d/
 #sudo bash Frontend.sh
 
 
