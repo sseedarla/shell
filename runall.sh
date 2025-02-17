@@ -1,5 +1,6 @@
 
-
+cd /etc/yum.repos.d/
+sudo rm -rf mongo.repo
 sudo mv mongo.repo /etc/yum.repos.d/
 sudo bash mongodb.sh
 
