@@ -48,7 +48,7 @@ resource "aws_instance" "Frontend" {
 }
 
 resource "aws_route53_record" "Frontend" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "frontend-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -65,7 +65,7 @@ resource "aws_instance" "MongoDB" {
 }
 
 resource "aws_route53_record" "MongoDB" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "mongodb-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -82,7 +82,7 @@ resource "aws_instance" "Catalogue" {
 }
 
 resource "aws_route53_record" "Catalogue" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "catalogue-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -102,7 +102,7 @@ resource "aws_instance" "Redis" {
 }
 
 resource "aws_route53_record" "Redis" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "redis-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -119,7 +119,7 @@ resource "aws_instance" "User" {
 }
 
 resource "aws_route53_record" "User" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "user-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -136,7 +136,7 @@ resource "aws_instance" "Cart" {
 }
 
 resource "aws_route53_record" "Cart" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "cart-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -153,7 +153,7 @@ resource "aws_instance" "MySQL" {
 }
 
 resource "aws_route53_record" "MySQL" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "mysql-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -170,7 +170,7 @@ resource "aws_instance" "Shipping" {
 }
 
 resource "aws_route53_record" "Shipping" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "shipping-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -187,7 +187,7 @@ resource "aws_instance" "RabbitMQ" {
 }
 
 resource "aws_route53_record" "RabbitMQ" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "rabbitmq-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -204,7 +204,7 @@ resource "aws_instance" "Payment" {
 }
 
 resource "aws_route53_record" "Payment" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "payment-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
@@ -221,7 +221,7 @@ resource "aws_instance" "Dispatch" {
 }
 
 resource "aws_route53_record" "Dispatch" {
-  zone_id = Z05653472ND08OLE086CI
+  zone_id = "Z05653472ND08OLE086CI"
   name    = "dispatch-dev.sseedarla.site"
   type    = "A"
   ttl     = 30
