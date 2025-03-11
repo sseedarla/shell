@@ -22,6 +22,7 @@ variable "instance_type" {
 
 data "aws_security_groups" "allow-all" {
   name = "Allow-all"
+
 }
 
 
