@@ -20,7 +20,7 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-data "aws_security_group" "Allow-all" {
+data "aws_security_groups" "allow-all" {
   name = "Allow-all"
 }
 
@@ -29,7 +29,7 @@ data "aws_security_group" "Allow-all" {
 resource "aws_instance" "Frontend" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Frontend"
   }
@@ -46,7 +46,7 @@ resource "aws_route53_record" "Frontend" {
 resource "aws_instance" "MongoDB" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "MongoDB"
   }
@@ -63,7 +63,7 @@ resource "aws_route53_record" "MongoDB" {
 resource "aws_instance" "Catalogue" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Catalogue"
   }
@@ -83,7 +83,7 @@ resource "aws_route53_record" "Catalogue" {
 resource "aws_instance" "Redis" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Redis"
   }
@@ -100,7 +100,7 @@ resource "aws_route53_record" "Redis" {
 resource "aws_instance" "User" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "User"
   }
@@ -117,7 +117,7 @@ resource "aws_route53_record" "User" {
 resource "aws_instance" "Cart" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Cart"
   }
@@ -134,7 +134,7 @@ resource "aws_route53_record" "Cart" {
 resource "aws_instance" "MySQL" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "MySQL"
   }
@@ -151,7 +151,7 @@ resource "aws_route53_record" "MySQL" {
 resource "aws_instance" "Shipping" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Shipping"
   }
@@ -168,7 +168,7 @@ resource "aws_route53_record" "Shipping" {
 resource "aws_instance" "RabbitMQ" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "RabbitMQ"
   }
@@ -185,7 +185,7 @@ resource "aws_route53_record" "RabbitMQ" {
 resource "aws_instance" "Payment" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Payment"
   }
@@ -202,7 +202,7 @@ resource "aws_route53_record" "Payment" {
 resource "aws_instance" "Dispatch" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
-  vpc_security_group_ids = [data.aws_security_group.Allow-all.id]
+  vpc_security_group_ids = [data.aws_security_groups.allow-all.id]
   tags = {
     Name = "Dispatch"
   }
