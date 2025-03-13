@@ -28,67 +28,65 @@ data "aws_security_group" "allow-all" {
 variable "components" {
   default = {
 
-    frontend =
-    {
+    frontend= {
   name          = "frontend"
   instance_type = "t2.micro"
 }
 
-mongodb=
-{
+mongodb= {
   name          = "mongodb"
   instance_type = "t2.micro"
 }
 
-catalogue=
-{
+catalogue= {
   name          = "catalogue"
   instance_type = "t2.micro"
 }
 
-redis=
-{
+redis= {
   name          = "redis"
   instance_type = "t2.micro"
 }
-user=
-{
+user= {
   name          = "user"
   instance_type = "t2.micro"
 }
-cart=
-{
+
+cart= {
   name          = "cart"
   instance_type = "t2.micro"
 }
-mysql=
-{
+
+mysql= {
   name          = "mysql"
   instance_type = "t2.micro"
 }
-shipping=
-{
+
+shipping= {
   name          = "shipping"
   instance_type = "t2.micro"
 }
-rabbitmq=
-{
+
+rabbitmq= {
   name          = "rabbitmq"
   instance_type = "t2.micro"
 }
-payment=
-{
+
+
+payment= {
   name          = "payment"
   instance_type = "t2.micro"
 }
-dispatch=
-{
+
+dispatch= {
   name          = "dispatch"
   instance_type = "t2.micro"
 }
 
 }
 }
+
+
 
 resource "aws_instance" "instance" {
 
