@@ -33,8 +33,7 @@ variable "components" {
   instance_type = "t2.micro"
 }
 
-mongodb=
-{
+mongodb= {
   name          = "mongodb"
   instance_type = "t2.micro"
 }
