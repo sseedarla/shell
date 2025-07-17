@@ -88,6 +88,7 @@ dispatch= {
 
 
 
+
 resource "aws_instance" "instance" {
 
   for_each = var.components
