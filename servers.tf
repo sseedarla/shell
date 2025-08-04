@@ -112,6 +112,8 @@ resource "aws_route53_record" "records" {
 
 
 # we have created for each loop no need of long process
+
+
 /*
 resource "aws_instance" "Frontend" {
   ami           = data.aws_ami.centos.image_id
