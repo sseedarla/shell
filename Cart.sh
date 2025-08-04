@@ -24,3 +24,5 @@ systemctl enable cart
 systemctl start cart
 
 sudo systemctl restart nginx
+
+cd /home/centos/shell

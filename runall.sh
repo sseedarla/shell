@@ -1,12 +1,7 @@
 
 
 
-cd /home/centos/shell
 
-
-sudo bash Frontend.sh
-
-sudo bash mongodb.sh
 
 sudo bash Cart.sh
 
