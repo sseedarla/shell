@@ -1,7 +1,7 @@
 
 
 
-cp user.service /etc/systemd/system/
+cp user.service /etc/systemd/system/user.service
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
