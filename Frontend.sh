@@ -11,10 +11,15 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
 
 
-sudo mv roboshop.conf /etc/nginx/default.d/
+cd /home/centos/shell
+
+sudo cp roboshop.conf /etc/nginx/default.d/
+
+
 
 #vim /etc/nginx/default.d/roboshop.conf
 
 
+/etc/nginx/default.d
 
 systemctl restart nginx
