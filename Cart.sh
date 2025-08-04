@@ -22,3 +22,5 @@ systemctl daemon-reload
 
 systemctl enable cart
 systemctl start cart
+
+sudo systemctl restart nginx
