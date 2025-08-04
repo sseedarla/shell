@@ -22,4 +22,4 @@ sudo cp roboshop.conf /etc/nginx/default.d/
 #vim /etc/nginx/default.d/roboshop.conf
 
 
-systemctl restart nginx
+sudo systemctl restart nginx

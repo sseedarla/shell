@@ -3,11 +3,14 @@ cd /etc/yum.repos.d/
 sudo rm -rf mongo.repo
 
 cd /home/centos/shell
-sudo mv mongo.repo /etc/yum.repos.d/
+
+
+
+
+sudo bash Frontend.sh
+
 sudo bash mongodb.sh
-
-
-
+sudo mv mongo.repo /etc/yum.repos.d/
 
 sudo bash Cart.sh
 
@@ -16,7 +19,7 @@ sudo bash Catalogue.sh
 sudo bash Dispatch.sh
 
 
-sudo bash Frontend.sh
+
 
 
 sudo bash Payment.sh

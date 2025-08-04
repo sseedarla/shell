@@ -1,13 +1,19 @@
 
+sudo cd /home/centos/shell
 
+sudo cp mongo.repo /etc/yum.repos.d/
 
-dnf install mongodb-org -y
+sudo cd /home/centos/shell
 
-systemctl enable mongod
-systemctl start mongod
+sudo dnf install mongodb-org -y
+
+sudo systemctl enable mongod
+sudo systemctl start mongod
 
 # You can edit file by using vim /etc/mongod.conf
 #Update listen address from 127.0.0.1 to 0.0.0.0 in /etc/mongod.conf
 
 
-systemctl restart mongod
+
+
+sudo systemctl restart mongod
