@@ -15,7 +15,7 @@ data "aws_ami" "centos" {
 
 }
 
-
+# we have created for each loop
 /*variable "" {
   default = "t2.micro"
 }*/
@@ -111,6 +111,7 @@ resource "aws_route53_record" "records" {
 }
 
 
+# we have created for each loop no need of long process
 /*
 resource "aws_instance" "Frontend" {
   ami           = data.aws_ami.centos.image_id
@@ -301,5 +302,5 @@ resource "aws_route53_record" "Dispatch" {
   ttl     = 30
   records = [aws_instance.Dispatch.private_ip]
 }
-*/
+
 
