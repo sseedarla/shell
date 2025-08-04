@@ -115,6 +115,7 @@ resource "aws_route53_record" "records" {
 
 
 /*
+
 resource "aws_instance" "Frontend" {
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
@@ -305,4 +306,7 @@ resource "aws_route53_record" "Dispatch" {
   records = [aws_instance.Dispatch.private_ip]
 }
 
+
+
+ */
 
