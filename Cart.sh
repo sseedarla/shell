@@ -1,6 +1,6 @@
 
-cd /
-sudo cp cart.service etc/systemd/system/
+
+cp cart.service /etc/systemd/system/
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
