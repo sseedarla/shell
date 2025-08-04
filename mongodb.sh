@@ -2,6 +2,7 @@
 cd /etc/yum.repos.d/
 sudo rm -rf mongo.repo
 
+
 sudo cd /home/centos/shell
 
 sudo cp mongo.repo /etc/yum.repos.d/
