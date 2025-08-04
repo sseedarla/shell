@@ -1,3 +1,8 @@
+
+
+sudo cp catalogue.service /etc/systemd/system/
+
+
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 

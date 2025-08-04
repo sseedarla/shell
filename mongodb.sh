@@ -24,4 +24,3 @@ cat etc/mongod.conf
 
 sudo systemctl restart mongod
 
-sudo systemctl restart nginx
