@@ -5,6 +5,8 @@
 
 #sudo cd /home/centos/shell
 
+sudo set-hostname mongodb
+
 sudo cp mongo.repo /etc/yum.repos.d/
 
 sudo cd /home/centos/shell
