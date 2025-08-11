@@ -3,7 +3,6 @@
 
 sudo cp catalogue.service /etc/systemd/system/
 
-sudo yum install -y unzip
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
@@ -18,10 +17,10 @@ mkdir /app
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 
 
-unzip /tmp/catalogue.zip
+sudo unzip /tmp/catalogue.zip
 
 cd /app
-npm install
+sudo npm install
 
 
 
@@ -29,6 +28,8 @@ systemctl daemon-reload
 
 systemctl enable catalogue
 systemctl start catalogue
+
+cd /home/centos/shell
 
 sudo cp mongo.repo /etc/yum.repos.d/
 
