@@ -43,6 +43,10 @@ variable "components" {
       instance_type = "t2.micro"
     }
 
+  }
+}
+
+    /*
 
 
     redis = {
@@ -85,9 +89,10 @@ variable "components" {
       instance_type = "t2.micro"
     }
 
-  }
-}
 
+
+
+     */
 
 resource "aws_instance" "instance" {
 
