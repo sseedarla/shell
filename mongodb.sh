@@ -25,6 +25,8 @@ sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf
  cd /
 cat etc/mongod.conf
 
+mongo --host mongodb-dev.sseedarla.site </app/schema/catalogue.js
+
 
 sudo systemctl restart mongod
 

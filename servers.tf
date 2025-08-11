@@ -43,6 +43,12 @@ catalogue= {
   instance_type = "t2.micro"
 }
 
+    # here is the ending on the compoents loop below
+  }
+}
+
+/*
+
 redis= {
   name          = "redis"
   instance_type = "t2.micro"
@@ -83,9 +89,10 @@ dispatch= {
   instance_type = "t2.micro"
 }
 
-}
-}
 
+
+
+ */
 
 
 

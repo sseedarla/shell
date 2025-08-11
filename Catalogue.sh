@@ -31,9 +31,10 @@ systemctl start catalogue
 
 sudo cp mongo.repo /etc/yum.repos.d/
 
-dnf install mongodb-org-shell -y
+#dnf install mongodb-org-shell -y
 
-mongo --host mongodb-dev.sseedarla.site </app/schema/catalogue.js
+# moved it to mongo db.sh file
+#mongo --host mongodb-dev.sseedarla.site </app/schema/catalogue.js
 
 # Note
   #You need to update catalogue server ip address in frontend configuration.
