@@ -31,7 +31,7 @@ systemctl start catalogue
 
 sudo cp mongo.repo /etc/yum.repos.d/
 
-dnf install mongodb-org-shell -y
+sudo dnf install mongodb-org-shell -y
 
 mongo --host mongodb-dev.sseedarla.site </app/schema/catalogue.js
 
