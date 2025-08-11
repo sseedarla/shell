@@ -3,6 +3,7 @@
 
 sudo cp catalogue.service /etc/systemd/system/
 
+sudo yum install -y unzip
 
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
