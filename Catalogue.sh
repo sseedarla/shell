@@ -4,19 +4,19 @@
 sudo cp catalogue.service /etc/systemd/system/
 
 
-sudo dnf module disable nodejs -y
-sudo dnf module enable nodejs:18 -y
+dnf module disable nodejs -y
+dnf module enable nodejs:18 -y
 
-sudo dnf install nodejs -y
+dnf install nodejs -y
 
 
-sudo useradd roboshop
+useradd roboshop
 
-sudo mkdir /app
-cd /app
+mkdir /app
+
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 
-
+cd /app
 unzip /tmp/catalogue.zip
 
 cd /app
@@ -29,14 +29,11 @@ systemctl daemon-reload
 systemctl enable catalogue
 systemctl start catalogue
 
-cd /home/centos/shell
-
-sudo cp mongo.repo /etc/yum.repos.d/
 
 
-sudo dnf install mongodb-org-shell -y
+dnf install mongodb-org-shell -y
 
-sudo mongo --host mongodb.dev.sseedarla.site </app/schema/catalogue.js
+mongo --host 34.204.92.146 </app/schema/catalogue.js
 
 # Note
   #You need to update catalogue server ip address in frontend configuration.
