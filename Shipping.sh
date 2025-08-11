@@ -28,6 +28,6 @@ systemctl start shipping
 
 dnf install mysql -y
 
-mysql -h mysql-dev.sseedarla.site -uroot -RoboShop@1 < /app/schema/shipping.sql
+mysql -h mysql.dev.sseedarla.site -uroot -RoboShop@1 < /app/schema/shipping.sql
 
 systemctl restart shipping

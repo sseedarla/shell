@@ -104,7 +104,7 @@ resource "aws_route53_record" "records" {
   for_each = var.components
 
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "${each.value["name"]}-dev.sseedarla.site"
+  name    = "${each.value["name"]}.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance[each.value["name"]].private_ip]
@@ -127,7 +127,7 @@ resource "aws_instance" "Frontend" {
 
 resource "aws_route53_record" "Frontend" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "frontend-dev.sseedarla.site"
+  name    = "frontend.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Frontend.private_ip]
@@ -144,7 +144,7 @@ resource "aws_instance" "MongoDB" {
 
 resource "aws_route53_record" "MongoDB" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "mongodb-dev.sseedarla.site"
+  name    = "mongodb.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.MongoDB.private_ip]
@@ -161,7 +161,7 @@ resource "aws_instance" "Catalogue" {
 
 resource "aws_route53_record" "Catalogue" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "catalogue-dev.sseedarla.site"
+  name    = "catalogue.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Catalogue.private_ip]
@@ -181,7 +181,7 @@ resource "aws_instance" "Redis" {
 
 resource "aws_route53_record" "Redis" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "redis-dev.sseedarla.site"
+  name    = "redis.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Redis.private_ip]
@@ -198,7 +198,7 @@ resource "aws_instance" "User" {
 
 resource "aws_route53_record" "User" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "user-dev.sseedarla.site"
+  name    = "user.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.User.private_ip]
@@ -215,7 +215,7 @@ resource "aws_instance" "Cart" {
 
 resource "aws_route53_record" "Cart" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "cart-dev.sseedarla.site"
+  name    = "cart.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Cart.private_ip]
@@ -232,7 +232,7 @@ resource "aws_instance" "MySQL" {
 
 resource "aws_route53_record" "MySQL" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "mysql-dev.sseedarla.site"
+  name    = "mysql.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Frontend.private_ip]
@@ -249,7 +249,7 @@ resource "aws_instance" "Shipping" {
 
 resource "aws_route53_record" "Shipping" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "shipping-dev.sseedarla.site"
+  name    = "shipping.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Shipping.private_ip]
@@ -266,7 +266,7 @@ resource "aws_instance" "RabbitMQ" {
 
 resource "aws_route53_record" "RabbitMQ" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "rabbitmq-dev.sseedarla.site"
+  name    = "rabbitmq.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.RabbitMQ.private_ip]
@@ -283,7 +283,7 @@ resource "aws_instance" "Payment" {
 
 resource "aws_route53_record" "Payment" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "payment-dev.sseedarla.site"
+  name    = "payment.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Payment.private_ip]
@@ -300,7 +300,7 @@ resource "aws_instance" "Dispatch" {
 
 resource "aws_route53_record" "Dispatch" {
   zone_id = "Z05653472ND08OLE086CI"
-  name    = "dispatch-dev.sseedarla.site"
+  name    = "dispatch.dev.sseedarla.site"
   type    = "A"
   ttl     = 30
   records = [aws_instance.Dispatch.private_ip]
