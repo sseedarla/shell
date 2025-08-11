@@ -13,10 +13,10 @@ dnf install nodejs -y
 useradd roboshop
 
 mkdir /app
-
+cd /app
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 
-cd /app
+
 unzip /tmp/catalogue.zip
 
 cd /app
