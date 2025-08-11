@@ -1,5 +1,4 @@
 
-sudo set-hostname shipping
 cp shipping.service /etc/systemd/system/
 
 dnf install maven -y

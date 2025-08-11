@@ -1,5 +1,5 @@
 
-sudo set-hostname user
+
 
 cp user.service /etc/systemd/system/user.service
 

@@ -1,5 +1,5 @@
 
-sudo set-hostname cart
+
 cp cart.service /etc/systemd/system/
 
 dnf module disable nodejs -y

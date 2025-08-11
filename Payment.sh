@@ -1,6 +1,6 @@
 
 
-sudo set-hostname payment
+
 
 cp payment.service /etc/systemd/system/
 

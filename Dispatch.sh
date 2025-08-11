@@ -1,5 +1,5 @@
 
-sudo set-hostname dispatch
+
 cp dispatch.service /etc/systemd/system/
 
 dnf install golang -y

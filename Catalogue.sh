@@ -1,6 +1,6 @@
 
 
-sudo set-hostname catalogue
+
 sudo cp catalogue.service /etc/systemd/system/
 
 

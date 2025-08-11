@@ -1,6 +1,6 @@
 
 
-sudo set-hostname mysql
+
 
 dnf module disable mysql -y
 
