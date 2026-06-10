@@ -8,10 +8,10 @@ terraform {
 }
 
 
-data "aws_ami" "redhat" {
+data "aws_ami" "Redhat" {
   owners = ["973714476881"]
   most_recent = true
-  name_regex  = "Centos-8-DevOps-Practice"
+  name_regex  = "Redhat-9-DevOps-Practice"
 
 }
 
@@ -92,7 +92,7 @@ variable "components" {
 resource "aws_instance" "instance" {
 
   for_each      = var.components
-  ami           = data.aws_ami.redhat.image_id
+  ami           = data.aws_ami.Redhat.image_id
   instance_type = each.value["instance_type"]
   vpc_security_group_ids = [data.aws_security_group.allow-all.id]
   tags = {
