@@ -20,7 +20,7 @@ cd /home/centos/shell
 
 #copy roboshop.conf file to nginx
 #sudo cp roboshop.conf /etc/nginx/default.d/
-sudo cp nginx.conf /etc/nginx/default.d/
+sudo cp nginx.conf /etc/nginx/
 
 #creating nginx file flow
 #vim /etc/nginx/default.d/roboshop.conf
